@@ -1,0 +1,45 @@
+{
+  "name": "youth-api",
+  "version": "1.0.0",
+  "description": "API for youth APP",
+  "main": "app.ts",
+  "scripts": {
+    "start": "dist/app.js",
+    "build": "tsc",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon dist/app.js\"",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KridiRamilli/youth-API.git"
+  },
+  "keywords": [
+    "youth",
+    "app",
+    "e-commerce"
+  ],
+  "author": "Kridi Ramilli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KridiRamilli/youth-API/issues"
+  },
+  "homepage": "https://github.com/KridiRamilli/youth-API#readme",
+  "devDependencies": {
+    "@types/morgan": "^1.9.4",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.11",
+    "bcrypt": "^5.1.0",
+    "concurrently": "^8.0.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
+    "helmet": "^6.1.5",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "^1.10.0",
+    "winston": "^3.8.2",
+    "xss-clean": "^0.1.1"
+  }
+}
