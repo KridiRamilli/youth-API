@@ -1,11 +1,11 @@
-import { auth } from "./../middlewares/index";
+import { authenticate } from "./../middlewares/auth";
 import express from "express";
 
 import { getUser } from "../controllers";
 
 const router = express.Router();
 
-router.get("/:id", auth, getUser);
+router.get("/:id", authenticate, getUser);
 
 export default router;
 

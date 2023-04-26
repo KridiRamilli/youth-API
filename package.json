@@ -4,7 +4,7 @@
   "description": "API for youth APP",
   "main": "app.ts",
   "scripts": {
-    "start": "dist/app.js",
+    "start": "node dist/app.js",
     "build": "tsc",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon dist/app.js\"",
     "test": "jest",
@@ -27,7 +27,9 @@
   "homepage": "https://github.com/KridiRamilli/youth-API#readme",
   "devDependencies": {
     "@jest/globals": "^29.5.0",
+    "@types/bcrypt": "^5.0.0",
     "@types/jest": "^29.5.0",
+    "@types/jsonwebtoken": "^9.0.1",
     "@types/morgan": "^1.9.4",
     "husky": "^8.0.3",
     "prisma": "^4.13.0",

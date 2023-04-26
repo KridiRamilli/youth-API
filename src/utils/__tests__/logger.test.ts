@@ -3,8 +3,8 @@ import path from "path";
 import { describe, it } from "@jest/globals";
 import fs from "fs";
 
-import { logger } from "./logger";
-import { wait } from "./utils";
+import { logger } from "../logger";
+import { wait } from "../utils";
 
 let logFileName = path.join(__dirname, "..", "..", "logs/test2.log");
 let testTransport: winston.transport;
