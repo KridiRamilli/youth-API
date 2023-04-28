@@ -1,9 +1,9 @@
 import { PrismaClient } from "@prisma/client";
-import { Request, Response } from "express";
-
+import type { Request, Response } from "express";
+import type { SafeRequest } from "../types";
 const prisma = new PrismaClient();
 
-const getCurrentUser = async (req: Request, res: Response) => {
+const getCurrentUser = async (req: SafeRequest, res: Response) => {
   res.status(200).json({
     user: req.user,
   });

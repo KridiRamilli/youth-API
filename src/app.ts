@@ -15,7 +15,7 @@ import morgan from "morgan";
 import winston from "winston";
 import { logger } from "./utils/logger";
 
-import userRouter from "./routes/index";
+import userRouter from "./routes/userRoutes";
 import { auth } from "./middlewares";
 
 const app: Express = express();
@@ -28,6 +28,7 @@ const httpLogStream = fs.createWriteStream(
     flags: "a",
   }
 );
+const { BASE_URL } = process.env;
 
 //middlewares
 app.use(express.json());
@@ -44,7 +45,7 @@ app.use(
 app.use(morgan("combined", { stream: httpLogStream }));
 
 //Routes
-app.use("/api/v1/user", userRouter);
+app.use(`${BASE_URL}/user`, userRouter);
 
 const start = async () => {
   try {
@@ -63,4 +64,8 @@ process.on("uncaughtException", (err) => {
   process.exit(1);
 });
 
-start();
+if (process.env.NODE_ENV !== "test") {
+  start();
+}
+
+export default app;

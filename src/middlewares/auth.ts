@@ -6,7 +6,7 @@ const authenticate = async (
   res: Response,
   next: NextFunction
 ) => {
-  logger.info(req.header);
+  // logger.info(req.header);
   next();
 };
 
