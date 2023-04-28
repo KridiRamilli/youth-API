@@ -1,8 +1,8 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import type { User } from "@prisma/client";
+import type { SafeUser } from "../types";
 
-const generateToken = (user: User, privateKey: string) => {
+const generateToken = (user: SafeUser, privateKey: string) => {
   const token = jwt.sign(user, privateKey);
   return token;
 };

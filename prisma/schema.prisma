@@ -18,10 +18,11 @@ enum USER_ROLE {
 
 model User{
   id Int @id @default(autoincrement())
-  name String @unique 
+  name String 
+  phone String @unique
   password String
   credit Int @default(0)
-  qrCodeId String?
+  qrCodeId String? @unique
   createdAt DateTime @default(now())
   role USER_ROLE @default(CUSTOMER)
 }
