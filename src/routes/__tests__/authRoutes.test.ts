@@ -17,7 +17,10 @@ beforeAll(() => {
 });
 
 describe("AUTH - user", () => {
-  test("POST - /login", () => {});
+  test("GET - /", async () => {
+    const res = await request(app).get(`${BASE_URL}/`).expect(401);
+    expect(res.body.result).toBe("error");
+  });
 });
 
 // */login - POST, Login user

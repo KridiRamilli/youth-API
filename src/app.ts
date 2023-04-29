@@ -16,7 +16,8 @@ import winston from "winston";
 import { logger } from "./utils/logger";
 
 import userRouter from "./routes/userRoutes";
-import { auth } from "./middlewares";
+import { authenticate } from "./middlewares/auth";
+import "./middlewares/validationSchema";
 
 const app: Express = express();
 

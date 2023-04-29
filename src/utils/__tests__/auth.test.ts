@@ -14,6 +14,7 @@ describe("Authentication and Authorization", () => {
     const payload: User = {
       id: 5,
       name: "YouthApi",
+      phone: "+355673871445",
       password: "123456",
       credit: 0,
       role: USER_ROLE.SALES,
